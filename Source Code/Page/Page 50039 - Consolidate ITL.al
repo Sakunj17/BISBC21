@@ -113,13 +113,30 @@ page 50039 "Consolidate Item ledger Entry"
             ProgressBar.OpenCopyCountMax('Consolidate Item Ledger Entry', CompanyRec.Count);
         If CompanyRec.FindSet() then
             repeat
-                ItmeLedgerEntryG.ChangeCompany(CompanyRec.CurrentCompany);
+                // message(CompanyRec.Name);
+                ItmeLedgerEntryG.Reset();
+                ItmeLedgerEntryG.ChangeCompany(CompanyRec.Name);
+                ItmeLedgerEntryG.setrange("Entry Type",ItmeLedgerEntryG."Entry Type"::Sale);
+                ItmeLedgerEntryG.SetAutoCalcFields("Shortcut Dimension 3 Code",
+                                                    "Shortcut Dimension 4 Code",
+                                                    "Shortcut Dimension 5 Code",
+                                                    "Shortcut Dimension 6 Code",
+                                                    "Shortcut Dimension 7 Code",
+                                                    "Shortcut Dimension 8 Code");
+           
                 if ItmeLedgerEntryG.FindSet() then
                     repeat
                         ConsolItemLedgerG.TransferFields(ItmeLedgerEntryG);
 
                         //ConsolItemLedgerG."Entry No." := EntryL;
                         ConsolItemLedgerG.CompanyName := CompanyRec.Name;
+                        ConsolItemLedgerG."Shortcut Dimension 3 Code" := ItmeLedgerEntryG."Shortcut Dimension 3 Code";
+                        ConsolItemLedgerG."Shortcut Dimension 4 Code" := ItmeLedgerEntryG."Shortcut Dimension 4 Code";
+                        ConsolItemLedgerG."Shortcut Dimension 5 Code" := ItmeLedgerEntryG."Shortcut Dimension 5 Code";
+                        ConsolItemLedgerG."Shortcut Dimension 6 Code" := ItmeLedgerEntryG."Shortcut Dimension 6 Code";
+                        ConsolItemLedgerG."Shortcut Dimension 7 Code" := ItmeLedgerEntryG."Shortcut Dimension 7 Code";
+                        ConsolItemLedgerG."Shortcut Dimension 8 Code" := ItmeLedgerEntryG."Shortcut Dimension 8 Code";
+                        
                         ConsolItemLedgerG.Insert();
                     until ItmeLedgerEntryG.Next() = 0;
                 if ShowDialog then
