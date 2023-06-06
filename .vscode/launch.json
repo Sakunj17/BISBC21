@@ -1,13 +1,37 @@
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Your own server",
+//             "request": "launch",
+//             "type": "al",
+//             "environmentType": "OnPrem",
+//             "server": "http://192.168.10.3:8080/BIS/",
+//             "serverInstance": "BIS",
+//             "authentication": "Windows",
+//             "startupObjectId": 22,
+//             "startupObjectType": "Page",
+//             "breakOnError": "All",
+//             "launchBrowser": true,
+//             "enableLongRunningSqlStatements": true,
+//             "enableSqlInformationDebugger": true,
+//             "tenant": "default",
+//             "port": 21012,
+//             "schemaUpdateMode": "ForceSync"
+//         }
+//     ]
+// }
 {
-    "version": "0.2.0",
+    "version": "0.2.0",    
     "configurations": [
         {
+            
             "name": "Your own server",
             "request": "launch",
             "type": "al",
-            "environmentType": "OnPrem",
-            "server": "http://192.168.10.3:8080/BIS/",
-            "serverInstance": "BIS",
+            "environmentType": "OnPrem",           
+            "server": "http://app05.naviworldth.com:8080/",                        
+            "serverInstance": "BIS_22",
             "authentication": "Windows",
             "startupObjectId": 22,
             "startupObjectType": "Page",
@@ -16,8 +40,8 @@
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
             "tenant": "default",
-            "port": 21012,
-            "schemaUpdateMode": "ForceSync"
+            "port": 22005,            
+            "schemaUpdateMode": "ForceSync",            
         }
     ]
 }

@@ -3,7 +3,7 @@
   "name": "BIS_Customization",
   "publisher": "NaviWorld (Thailand) Co., Ltd.",
   "version": "1.0.1.0",
-  "brief": "Customization Business central BC 21.1",
+  "brief": "Customization Business central BC 22.1",
   "description": "Customization Business central BC 21.1 for Bioscience Animal Heath Public Company Limited.",
   "privacyStatement": "",
   "EULA": "",
@@ -20,7 +20,7 @@
   ],
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "21.0.0.0",
+  "application": "22.0.0.0",
   "idRanges": [
     {
       "from": 50000,
@@ -33,7 +33,7 @@
     "includeSourceInSymbolFile": true
   },
   "target": "Cloud",
-  "runtime": "10.0",
+  "runtime": "11.0",
   "features": [
     "NoImplicitWith"
   ]  
